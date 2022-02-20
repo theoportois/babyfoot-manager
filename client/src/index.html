@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BabyFoot Manager</title>
+    <link href=".\resources\css\index.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div class="gamesLayout">
+
+            <div class="top">
+                <h1>BabyFoot Manager</h1>
+                <h2 id="counter" class="counter"></h2>
+            </div>
+
+            <div class="newGame">
+                <input class="short" id="newGameInput" type="text" placeholder="Nouvelle partie ..." />
+                <button id="newGameButton" onclick="newGame()">Ajouter</button>
+            </div>
+
+            <div class="games" id="games"></div>
+
+        </div>
+
+        <div class="tchatLayout">
+            <h1>Tchat</h1>
+
+            <input id="nickNameInput" type="text" placeholder="Nickname ..." />
+
+            <div class="tchat" id="tchat">
+
+                <div class="messages" id="messages"></div>
+
+                <div class="newMessage">
+                    <input class="short" id="messageInput" type="text" placeholder="message"
+                        onkeydown="event.key==='Enter' ? sendMessage() : true" />
+                    <button onclick="sendMessage()">Envoyer</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+
+</body>
+
+</html>
